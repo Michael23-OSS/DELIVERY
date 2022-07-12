@@ -1,0 +1,40 @@
+//Ver usuario por id
+###
+POST http://localhost:3000/delivery/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "userName": "Noemi Flores",
+    "userAddress": "Calle A y Calle B",
+    "userPhone": 987654780,
+    "userEmail": "plflores2@espe.edu.ec"
+}
+
+###
+POST http://localhost:3000/delivery/product/sold HTTP/1.1
+Content-Type: application/json
+
+{
+    "productName": "A17",
+    "productBrand": "Samsung",
+    "productPrice": 300,
+    "productQuantity": 4,
+    "productDescription": ""
+}
+
+###
+GET http://localhost:3000/delivery/users HTTP/1.1
+
+###
+GET http://localhost:3000/delivery/all HTTP/1.1
+
+//Eliminar un usuario
+###
+DELETE http://localhost:3000/delivery/users/62ccd4b107d3382233a95789 HTTP/1.1
+
+//Eliminar un producto
+###
+DELETE http://localhost:3000/delivery/products/62ccea0feec277755909ec57 HTTP/1.1
+
+###
+GET http://localhost:3000/delivery/products/productBrand HTTP/1.1
